@@ -1,4 +1,4 @@
-"""wordcount-project URL Configuration
+"""wordcounter URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -15,6 +15,9 @@ Including another URLconf
 """
 from django.urls import path
 
+from . import views
+
 urlpatterns = [
-    path('',)
+    path('', views.home),
+    path('count/', views.count, name='count')
 ]
