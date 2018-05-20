@@ -7,7 +7,7 @@ class Blog(models.Model):
     title = models.CharField(max_length=255)
     pub_day = models.DateTimeField()
     body = models.TextField()
-    image = models.ImageField(up_load='images/')
+    image = models.ImageField(upload_to='images/')
 
 # Add the blog app to the settings
 

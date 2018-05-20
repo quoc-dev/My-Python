@@ -35,37 +35,23 @@
 </header>
 
 <main role="main">
+    <div class="container">
+        <h1 class="text-center pt-3">Welcome to Quoc DEV's Blog</h1>
+        <br/>
+        <br/>
+        <h2>Last Posts</h2>
+        <hr/>
 
-    <section class="jumbotron text-center">
-        <div class="container">
-            <h1 class="jumbotron-heading">Hi, I'm Quoc DEV</h1>
-            <p class="lead text-muted">Hey! I'm Quoc DEV and I love to make Django websites</p>
-            <p>
-                <a href="mailto:quocdev@django.com" class="btn btn-primary my-2">Email Me</a>
-            </p>
-        </div>
-    </section>
+        {% for blog in blogs.all %}
+        <a href=""><h3> {{ blog.title }} </h3></a>
+        {{ blog.pub_day }}
+        <br/>
+        <image class="img-fluid" src="{{ blog.image.url }}" height=200 width="200"/>
+        <br/>
+        <p>{{ blog.body }}</p>
+        {% endfor %}
 
-    <div class="album py-5 bg-light">
-        <div class="container">
-
-            <div class="row">
-
-                {% for job in jobs.all %}
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="{{ job.image.url }}"/>
-                        <div class="card-body">
-                            <p class="card-text">{{ job.summary }}</p>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-
-            </div>
-        </div>
     </div>
-
 </main>
 
 <footer class="text-muted">
