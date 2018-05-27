@@ -3,4 +3,4 @@ In here where I learn Python
 
 ### List project
 - `WordCounter` -> Nhập vào một đoạn text đếm xem có bao nhiêu chữ và lọc ra mỗi chữ hiên thị mấy lần!
-- 'Portfolio' -> Trang gioi thieu ca nha + blog
+- `Portfolio`-> Trang giới thiệu cá nhân và tổng hợp các blog!

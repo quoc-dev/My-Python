@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
 
     <title>Quoc DEV Portfolio</title>
 
@@ -43,6 +43,7 @@
             <p>
                 <a href="mailto:quocdev@django.com" class="btn btn-primary my-2">Email Me</a>
             </p>
+            <img src="{% static 'my_logo.png' %}" height=300/>
         </div>
     </section>
 
@@ -54,7 +55,7 @@
                 {% for job in jobs.all %}
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="{{ job.image.url }}"/>
+                        <img class="card-img-top" src="{{ job.image.url }}" height=200 width="200"/>
                         <div class="card-body">
                             <p class="card-text">{{ job.summary }}</p>
                         </div>

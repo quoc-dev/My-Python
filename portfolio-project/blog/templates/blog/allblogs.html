@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Quoc DEV Portfolio</title>
+    <title>Quoc DEV's Blogs</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
@@ -28,7 +28,7 @@
             <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link" href="https://twitter.com/quocdev">Twitter</a>
                 <a class="nav-item nav-link" href="#">Resume</a>
-                <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
+                <a class="nav-item nav-link active" href="{% url 'allblogs' %}">Blog</a>
             </div>
         </div>
     </nav>
@@ -42,13 +42,13 @@
         <h2>Last Posts</h2>
         <hr/>
 
-        {% for blog in blogs.all %}
-        <a href=""><h3> {{ blog.title }} </h3></a>
-        {{ blog.pub_day }}
+        {% for blog in blog.all %}
+        <a href="{% url 'detail' blog.id %}"><h3> {{ blog.title }} </h3></a>
+        {{ blog.pub_date_pretty }}
         <br/>
         <image class="img-fluid" src="{{ blog.image.url }}" height=200 width="200"/>
         <br/>
-        <p>{{ blog.body }}</p>
+        <p>{{ blog.summary }}</p>
         {% endfor %}
 
     </div>
