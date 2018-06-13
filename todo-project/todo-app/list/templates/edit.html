@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Item of Todo</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if item %}
+        <form class="form-inline my-2 my-lg-0" method="POST">
+                {% csrf_token %}
+                <input class="form-control mr-sm-2" type="search" placeholder= "{{ item.item }}" value="{{ item.item }}"
+                       aria-label="Add-to-list" name="item">
+
+                <input type="hidden" value="{{ item.item }}" name="completed">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Edit Item</button>
+        </form>
+    {% endif %}
+{% endblock %}
+</body>
+</html>
