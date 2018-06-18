@@ -25,6 +25,3 @@ class Blog(models.Model):
 
 
 # Migrate
-
-
-# Add to admin
