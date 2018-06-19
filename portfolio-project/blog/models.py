@@ -23,5 +23,3 @@ class Blog(models.Model):
 
 # Create a migration
 
-
-# Migrate
