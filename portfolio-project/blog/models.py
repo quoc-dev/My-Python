@@ -18,6 +18,4 @@ class Blog(models.Model):
     def pub_date_pretty(self):
         return self.pub_day.strftime('%b %e %Y')
 
-# Add the blog app to the settings
-
 
