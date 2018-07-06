@@ -21,5 +21,3 @@ class Blog(models.Model):
 # Add the blog app to the settings
 
 
-# Create a migration
-
