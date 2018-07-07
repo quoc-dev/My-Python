@@ -16,3 +16,5 @@ In here where I learn Python
 - `init app of site` --> `django-admin startapp name`
 
 - `migration` --> `python manage.py migrate`
+
+tobe continue...
