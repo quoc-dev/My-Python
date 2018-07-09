@@ -18,3 +18,5 @@ In here where I learn Python
 - `migration` --> `python manage.py migrate`
 
 tobe continue...
+
+
