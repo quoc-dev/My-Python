@@ -14,6 +14,8 @@ In here where I learn Python
 - `init django` -> `pip install Django==2.0.7`
 - `init site` --> `django-admin startproject mysite`
 - `init app of site` --> `django-admin startapp name`
+- `init opencv for python` -> `pip install opencv-python`
+- `install python image library` --> `pip install pillow`
 
 - `migration` --> `python manage.py migrate`
 
